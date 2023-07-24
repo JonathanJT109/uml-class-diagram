@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.25)
 
-project(umlClassDiagram)
+project(umlClassDiagram VERSION 1.0)
 
-add_executable(umlClassDiagram main.cpp)
+set(CMAKE_CXX_STANDARD 17)
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/../bin/")
+
+add_executable(umlClassDiagram src/main.cpp include/lexer.cpp include/token.cpp)
 
 include_directories(include)
-
-set(CMAKE_CXX_STANDARD "${CMAKE_CXX_STANDARD} -std=c++17 -Wall")

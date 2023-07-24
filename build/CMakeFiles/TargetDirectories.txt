@@ -1,0 +1,3 @@
+/Users/jgonz/projects/uml-class-diagram/build/CMakeFiles/umlClassDiagram.dir
+/Users/jgonz/projects/uml-class-diagram/build/CMakeFiles/edit_cache.dir
+/Users/jgonz/projects/uml-class-diagram/build/CMakeFiles/rebuild_cache.dir

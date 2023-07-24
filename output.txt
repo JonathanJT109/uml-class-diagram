@@ -1,0 +1,15 @@
+a = (3.431 + 5.3) * 103 / 10
+^ (IdentifierToken, "a", 0 -> 1, line: 0)
+  ^ (EqualToken, "=", 2 -> 3, line: 0)
+    ^ (LeftParenToken, "(", 4 -> 5, line: 0)
+     ^^^^^ (FloatToken, "3.431", 5 -> 10, line: 0)
+           ^ (PlusToken, "+", 11 -> 12, line: 0)
+             ^^^ (FloatToken, "5.3", 13 -> 16, line: 0)
+                ^ (RightParenToken, ")", 16 -> 17, line: 0)
+                  ^ (AsteriskToken, "*", 18 -> 19, line: 0)
+                    ^^^ (IntegerToken, "103", 20 -> 23, line: 0)
+                        ^ (SlashToken, "/", 24 -> 25, line: 0)
+                          ^^ (IntegerToken, "10", 26 -> 28, line: 0)
+                             (EndOfLineToken, "\n", 28 -> 29, line: 0)
+<End of File>
+

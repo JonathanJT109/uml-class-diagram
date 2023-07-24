@@ -1,2 +1,0 @@
-myVariable = 50
-myOtherVariable = 104
