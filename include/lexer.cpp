@@ -13,7 +13,7 @@ Lexer::Lexer(std::string text) {
 }
 
 char Lexer::currentChar() {
-  if (position > text.size())
+  if (position >= text.size())
     return '\0';
 
   return text[position];
@@ -44,6 +44,8 @@ Token Lexer::nextToken() {
     return read_word();
   else if (isdigit(currentChar()))
     return read_number();
+  else if (is_comment())
+    return read_comment();
 
   switch (currentChar()) {
   case '\0':
@@ -67,8 +69,6 @@ Token Lexer::nextToken() {
   case '*':
     return _default(Kind::AsteriskToken);
   case '/':
-    if (is_comment())
-      return read_comment();
     return _default(Kind::SlashToken);
   case '=':
     return _default(Kind::EqualToken);
@@ -108,8 +108,9 @@ Token Lexer::read_number() {
     nextChar();
     while (isdigit(currentChar()))
       nextChar();
-    return Token(Kind::FloatToken, text.substr(start, position - start),
-                 {start, index, line});
+    pos.end = this->index;
+    pos.line = this->line;
+    return Token(Kind::FloatToken, text.substr(start, position - start), pos);
   }
 
   pos.end = this->index;
