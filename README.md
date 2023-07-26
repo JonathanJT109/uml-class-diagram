@@ -135,3 +135,9 @@ cd ..
 
 Hopefully, you will be able to see the executable located in the bin directory.
 
+## Inspiration
+[vim9jit](https://github.com/tjdevries/vim9jit)
+
+[Simple C++ Lexer](https://gist.github.com/arrieta/1a309138689e09375b90b3b1aa768e20)
+
+[Building a Compiler](https://www.youtube.com/watch?v=wgHIkdUQbp0&list=PLRAdsfhKI4OWNOSfS7EUu5GRAVmze1t2y)
