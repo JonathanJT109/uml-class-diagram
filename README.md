@@ -1,4 +1,4 @@
-# UML Class Diagram
+# UML Class Diagram (Tokenizer)
 This is a project that takes `C++` code and creates a class diagram. In other
 words, it is a transpiler from `C++` to `Mermaid`.
 
